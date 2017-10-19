@@ -70,9 +70,9 @@ void setup()
 }
 
 // Set the frequency that we will get on pin OCR1A but don't turn it on
-void setFrequency(uint16_t freq)
+void setFrequency(uint16_t freq) // watch out for the weird format ..
 {
- uint32_t requiredDivisor = (F_CPU/2)/(uint32_t)freq;
+ uint32_t requiredDivisor = (F_CPU/2)/(uint32_t)freq; 
 
  uint16_t prescalerVal = 1;
  uint8_t prescalerBits = 1;
