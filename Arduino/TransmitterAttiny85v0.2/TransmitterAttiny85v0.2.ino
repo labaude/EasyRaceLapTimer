@@ -44,7 +44,7 @@ unsigned int get_pulse_width_for_buffer(int bit){
 }
 
 unsigned int control_bit(){
-  if(num_one_pulses % 2 >= 1){
+  if(num_one_pulses % 2 >= 1){ //@Remi if sum of bit which are equal to one is odd, then control bit is set to 1 
     return ONE;  
   }else{
     return ZERO;
@@ -66,7 +66,7 @@ void setup()
   buffer[5] = get_pulse_width_for_buffer(2);
   buffer[6] = get_pulse_width_for_buffer(1);
   buffer[7] = get_pulse_width_for_buffer(0);
-  buffer[8] = control_bit(); 
+  buffer[8] = control_bit(); // To make sure the sum of the bit is even the control bit is set to one or zero.. ? not sure what is the exact purpose...
 }
 
 // Set the frequency that we will get on pin OCR1A but don't turn it on
