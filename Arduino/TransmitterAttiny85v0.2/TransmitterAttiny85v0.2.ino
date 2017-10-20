@@ -66,7 +66,7 @@ void setup()
   buffer[5] = get_pulse_width_for_buffer(2);
   buffer[6] = get_pulse_width_for_buffer(1);
   buffer[7] = get_pulse_width_for_buffer(0);
-  buffer[8] = control_bit(); // To make sure the sum of the bit is even the control bit is set to one or zero.. ? not sure what is the exact purpose...
+  buffer[8] = control_bit(); // @Remi To make sure the sum of the bit is even the control bit is set to one or zero.. ? not sure what is the exact purpose...
 }
 
 // Set the frequency that we will get on pin OCR1A but don't turn it on
